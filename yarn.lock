@@ -909,6 +909,11 @@ escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
+eslint-plugin-jest@^22.1.0:
+  version "22.1.0"
+  resolved "https://mlp-sdlc.bluealba.com:443/artifactory/api/npm/npm-release-virtual/eslint-plugin-jest/-/eslint-plugin-jest-22.1.0.tgz#9a4dfa3367563e8301560a7fb92ec309096dbca3"
+  integrity sha1-mk36M2dWPoMBVgp/uS7DCQltvKM=
+
 eslint-scope@^4.0.0:
   version "4.0.0"
   resolved "https://mlp-sdlc.bluealba.com:443/artifactory/api/npm/npm-release-virtual/eslint-scope/-/eslint-scope-4.0.0.tgz#50bf3071e9338bcdc43331794a0cb533f0136172"

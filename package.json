@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "An easy way to keep your environments in sync",
   "main": "index.js",
-  "license": "MIT",
+	"license": "MIT",
+	"scripts": {
+		"test": "jest --coverage"
+	},
   "devDependencies": {
     "eslint": "^5.9.0",
+    "eslint-plugin-jest": "^22.1.0",
     "jest": "^23.6.0"
   },
   "dependencies": {
