@@ -5,6 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "^5.9.0",
     "jest": "^23.6.0"
   },
   "dependencies": {
