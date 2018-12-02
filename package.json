@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "An easy way to keep your environments in sync",
   "main": "index.js",
-	"license": "MIT",
-	"scripts": {
-		"test": "jest --coverage"
-	},
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --coverage"
+  },
   "devDependencies": {
     "eslint": "^5.9.0",
     "eslint-plugin-jest": "^22.1.0",
@@ -17,8 +17,10 @@
     "co": "^4.6.0",
     "inquirer": "^6.2.0",
     "node-emoji": "^1.8.1",
+    "ora": "^3.0.0",
     "promisify-fs": "^1.0.39",
     "ramda": "^0.26.1",
-    "semver": "^5.6.0"
+    "semver": "^5.6.0",
+    "slack": "^11.0.1"
   }
 }

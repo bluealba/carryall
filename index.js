@@ -1,32 +1,16 @@
 "use strict";
 
-const co = require("co");
-const { console: reporter } = require("./lib/Reporter");
-const { interactiveConsole: control } = require("./lib/Control");
-const { fs: descriptorFactory } = require("./lib/Descriptor");
+const Carryall = require("./lib/Carryall");
+const fs = require("fs");
 
-const installPackages = require("./lib/installPackages");
+const Slack = require("slack");
+const token = "SQm9TXBTZRkdrk0LX6fFS9Tu"
 
-const work = co.wrap(function*() {
-	reporter.greet();
+const slack = new Slack({ token });
+slack.chat.postMessage({
+	channel: "@cf",
+	text: "hola"
+})
 
-	const descriptor = yield descriptorFactory();
-	const necessaryUpgrades = yield descriptor.requiredActions();
-	reporter.reportPendingActions(necessaryUpgrades);
-
-	if (! necessaryUpgrades.length) return; //noop
-
-	const proceed = yield control.confirmInstall();
-	if (! proceed) return;
-
-	reporter.reportInstallStart();
-	yield installPackages(necessaryUpgrades);
-	reporter.reportInstallDone();
-
-	const newState = yield descriptor.inspectEnvironment();
-	const pendingActions = yield descriptor.requiredActions(); //should be empty
-	reporter.reportActionsDone(newState, necessaryUpgrades, pendingActions);
-});
-
-
-work();
+// const config = JSON.parse(fs.readFileSync("./carryall.json", { "encoding": "UTF-8" }));
+// new Carryall().deploy(config)
