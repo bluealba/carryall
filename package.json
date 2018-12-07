@@ -1,10 +1,12 @@
 {
   "name": "@bluealba/carryall",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An easy way to keep your environments in sync",
   "main": "index.js",
 	"license": "MIT",
-	"bin": "./index.js",
+	"bin": {
+		"carryall": "./index.js"
+	},
   "scripts": {
     "test": "jest --coverage"
 	},
