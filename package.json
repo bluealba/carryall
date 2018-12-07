@@ -1,21 +1,22 @@
 {
   "name": "@bluealba/carryall",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An easy way to keep your environments in sync",
   "main": "index.js",
-	"license": "MIT",
-	"bin": {
-		"carryall": "./index.js"
-	},
+  "license": "MIT",
+  "bin": {
+    "carryall": "./index.js"
+  },
   "scripts": {
     "test": "jest --coverage"
-	},
+  },
   "devDependencies": {
     "eslint": "^5.9.0",
     "eslint-plugin-jest": "^22.1.0",
     "jest": "^23.6.0"
   },
   "dependencies": {
+    "bluebird": "^3.5.3",
     "chalk": "^2.4.1",
     "co": "^4.6.0",
     "inquirer": "^6.2.0",
