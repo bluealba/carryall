@@ -1,6 +1,6 @@
 {
   "name": "@bluealba/carryall",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "An easy way to keep your environments in sync",
   "main": "index.js",
   "license": "MIT",

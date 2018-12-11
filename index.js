@@ -16,7 +16,7 @@ program
 const config = JSON.parse(fs.readFileSync(program.config || "./carryall.json", { "encoding": "UTF-8" }));
 config.control = {
 	silent: program.silent,
-	noRestart: program.noRestart,
+	noRestart: !program.restart,
 }
 
 new Carryall().deploy(config)
