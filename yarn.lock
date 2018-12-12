@@ -3049,6 +3049,13 @@ progress@^2.0.0:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
+promisify-bash@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/promisify-bash/-/promisify-bash-1.0.0.tgz#875c3bcf2f5a1078fca2f58936a7f4d5a1baeab7"
+  integrity sha1-h1w7zy9aEHj8ovWJNqf01aG66rc=
+  dependencies:
+    bluebird "3.3.5"
+
 promisify-bash@^1.0.5:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/promisify-bash/-/promisify-bash-1.0.9.tgz#872db2c51f253ec1471500317377e227ebc88341"
@@ -3056,13 +3063,22 @@ promisify-bash@^1.0.5:
   dependencies:
     bluebird "3.3.5"
 
-promisify-fs@^1.0.39:
+promisify-fs@^1.0.33, promisify-fs@^1.0.39:
   version "1.0.39"
   resolved "https://registry.yarnpkg.com/promisify-fs/-/promisify-fs-1.0.39.tgz#6ee5e50404ee6c35aa65fd2b36f7072894c1f8c4"
   integrity sha1-buXlBATubDWqZf0rNvcHKJTB+MQ=
   dependencies:
     promisify-bash "^1.0.5"
     shelljs "^0.7.0"
+
+promisify-git@^1.1.22:
+  version "1.1.22"
+  resolved "https://registry.yarnpkg.com/promisify-git/-/promisify-git-1.1.22.tgz#ff7960dd677997fb17c2ec090306e57a4b6c788e"
+  integrity sha1-/3lg3Wd5l/sXwuwJAwblektseI4=
+  dependencies:
+    bluebird "3.3.5"
+    promisify-bash "1.0.0"
+    promisify-fs "^1.0.33"
 
 prompts@^0.1.9:
   version "0.1.14"

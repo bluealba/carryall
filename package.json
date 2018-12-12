@@ -1,6 +1,6 @@
 {
   "name": "@bluealba/carryall",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "An easy way to keep your environments in sync",
   "main": "index.js",
   "license": "MIT",
@@ -24,6 +24,7 @@
     "node-emoji": "^1.8.1",
     "ora": "^3.0.0",
     "promisify-fs": "^1.0.39",
+    "promisify-git": "^1.1.22",
     "ramda": "^0.26.1",
     "semver": "^5.6.0",
     "slack": "^11.0.1"
