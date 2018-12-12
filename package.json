@@ -16,6 +16,7 @@
     "jest": "^23.6.0"
   },
   "dependencies": {
+    "@slack/client": "^4.8.0",
     "bluebird": "^3.5.3",
     "chalk": "^2.4.1",
     "co": "^4.6.0",
@@ -26,7 +27,6 @@
     "promisify-fs": "^1.0.39",
     "promisify-git": "^1.1.22",
     "ramda": "^0.26.1",
-    "semver": "^5.6.0",
-    "slack": "^11.0.1"
+    "semver": "^5.6.0"
   }
 }
