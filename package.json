@@ -2,11 +2,11 @@
   "name": "@bluealba/carryall",
   "version": "1.0.11",
   "description": "An easy way to keep your environments in sync",
-  "main": "index.js",
+  "main": "carryall-cli.js",
   "license": "MIT",
   "bin": {
-		"carryall": "./index.js",
-		"carryall-bot": "./bot.js"
+    "carryall": "./carryall-cli.js",
+    "carryall-bot": "./bot.js"
   },
   "scripts": {
     "test": "jest --coverage"
@@ -26,7 +26,6 @@
     "node-emoji": "^1.8.1",
     "ora": "^3.0.0",
     "promisify-fs": "^1.0.39",
-    "promisify-git": "^1.1.22",
     "ramda": "^0.26.1",
     "semver": "^5.6.0"
   }

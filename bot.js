@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 "use strict";
 
-// const { WebClient } = require("@slack/client");
+const { WebClient } = require("@slack/client");
 const { RTMClient } = require("@slack/client");
 const fs = require("fs");
-const Carryall = require("./lib/Carryall");
+const Carryall = require("./lib/core/Carryall");
+const { tail, anyPass } = require("ramda");
 
-// const web = new WebClient("xoxb-116831015569-493822481716-b2iWdHVRCOJ6N2NpctkblTJ4")
+const web = new WebClient("xoxb-116831015569-493822481716-b2iWdHVRCOJ6N2NpctkblTJ4")
 const rtm = new RTMClient("xoxb-116831015569-493822481716-b2iWdHVRCOJ6N2NpctkblTJ4")
 rtm.start();
 
@@ -17,11 +18,38 @@ const parseConfig = () => {
 	return config;
 }
 
-rtm.on("message", message => {
-	if (message.text.includes(`<@${rtm.activeUserId}>`)) {
-		if (message.text.includes("list")) {
-			const config = parseConfig();
+/**
+ * If the regular expression matches, then the action function is invoked
+ * @return true if there was a match, false otherwhise
+ */
+const match = (regexp, action) => message => {
+	const match = message.text.match(regexp);
+	if (match) {
+		action(message,...tail(match));
+		return true;
+	} else {
+		return false;
+	}
+}
+
+const reply = message => original => {
+	web.chat.postMessage(Object.assign({ channel: original.channel }, message))
+}
+
+const handleMessage = anyPass([
+	match(/list\s+(\w+)/i, (message, environment) => {
+		const config = parseConfig();
+		if (environment.toUpperCase() === config.environment) {
+			config.reporter.slack.channel = message.channel;
 			new Carryall().state(config)
 		}
+	}),
+	match(/list/i, reply({ text: "Please specify an environment for listing" })),
+	match(/i\s+love*\s+[you|u]/i, reply({ text: "Me too" })),
+]);
+
+rtm.on("message", message => {
+	if (message.text && message.text.includes(`<@${rtm.activeUserId}>`)) {
+		handleMessage(message);
 	}
 })

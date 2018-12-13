@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 "use strict";
 
-const Carryall = require("./lib/Carryall");
+const Carryall = require("./lib/core/Carryall");
 const fs = require("fs");
 const program = require("commander");
 const ownVersion = require("./package.json");
