@@ -7,16 +7,17 @@ const fs = require("fs");
 const Carryall = require("./lib/core/Carryall");
 const { tail, anyPass } = require("ramda");
 
-const web = new WebClient("xoxb-116831015569-493822481716-b2iWdHVRCOJ6N2NpctkblTJ4")
-const rtm = new RTMClient("xoxb-116831015569-493822481716-b2iWdHVRCOJ6N2NpctkblTJ4")
-rtm.start();
-
 const parseConfig = () => {
 	const config = JSON.parse(fs.readFileSync("./carryall.json", { "encoding": "UTF-8" }));
 	config.reporter.mode = "slack";
 	config.control = { silent: true, noRestart: false }
 	return config;
 }
+
+const config = parseConfig();
+const web = new WebClient(config.reporter.slack.token);
+const rtm = new RTMClient(config.reporter.slack.token);
+rtm.start();
 
 /**
  * If the regular expression matches, then the action function is invoked
