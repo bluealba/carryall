@@ -1,6 +1,6 @@
 {
   "name": "@bluealba/carryall",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "An easy way to keep your environments in sync",
   "main": "carryall-cli.js",
   "license": "MIT",
@@ -27,6 +27,7 @@
     "ora": "^3.0.0",
     "promisify-fs": "^1.0.39",
     "ramda": "^0.26.1",
-    "semver": "^5.6.0"
+    "semver": "^5.6.0",
+    "simple-git": "^1.107.0"
   }
 }

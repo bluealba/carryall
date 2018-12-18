@@ -24,9 +24,10 @@ You will need to create a configuration file. The default name is `carryall.json
 {
 	"environment": "<environment name>",
 	"descriptor": {
-		"repositoryUrl": "<your git repo>,
-		"password": "<your ssh password>"
-		"branch": "<the branch to check out>",
+		"repository": "<your git repo url, without protocol and username please>,
+		"username": "<your username>",
+		"password": "<your password>"
+		"branch": "<the branch to checkout>",
 	},
 	"reporter": {
 		"slack": {
