@@ -17,7 +17,7 @@
     "jest": "^23.6.0"
   },
   "dependencies": {
-    "@slack/client": "^4.8.0",
+    "@slack/client": "^5.0.2",
     "bluebird": "^3.5.3",
     "chalk": "^2.4.1",
     "co": "^4.6.0",
