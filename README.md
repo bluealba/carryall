@@ -1,4 +1,4 @@
-@bluealba/carryall
+carryall
 ===
 A easy way to keep your environments in sync
 

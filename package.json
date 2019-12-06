@@ -1,6 +1,6 @@
 {
-  "name": "@bluealba/carryall",
-  "version": "1.0.12",
+  "name": "carryall",
+  "version": "1.0.13",
   "description": "An easy way to keep your environments in sync",
   "main": "carryall-cli.js",
   "license": "MIT",
@@ -12,22 +12,22 @@
     "test": "jest --coverage"
   },
   "devDependencies": {
-    "eslint": "^5.9.0",
-    "eslint-plugin-jest": "^22.1.0",
-    "jest": "^23.6.0"
+    "eslint": "^6.7.2",
+    "eslint-plugin-jest": "^23.1.1",
+    "jest": "^24.9.0"
   },
   "dependencies": {
-    "@slack/client": "^4.8.0",
-    "bluebird": "^3.5.3",
-    "chalk": "^2.4.1",
+    "@slack/client": "^5.0.2",
+    "bluebird": "^3.7.2",
+    "chalk": "^3.0.0",
     "co": "^4.6.0",
-    "commander": "^2.19.0",
-    "inquirer": "^6.2.0",
-    "node-emoji": "^1.8.1",
-    "ora": "^3.0.0",
+    "commander": "^4.0.1",
+    "inquirer": "^7.0.0",
+    "node-emoji": "^1.10.0",
+    "ora": "^4.0.3",
     "promisify-fs": "^1.0.39",
     "ramda": "^0.26.1",
-    "semver": "^5.6.0",
-    "simple-git": "^1.107.0"
+    "semver": "^6.3.0",
+    "simple-git": "^1.128.0"
   }
 }
