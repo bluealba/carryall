@@ -1,6 +1,14 @@
 carryall
 ===
+
+[![Build Status](https://travis-ci.org/bluealba/carryall.svg?branch=master)](https://travis-ci.org/bluealba/carryall)
+[![npm](https://img.shields.io/npm/v/carryall.svg)](https://npmjs.org/package/carryall)
+[![npm](https://img.shields.io/npm/dt/carryall.svg)](https://npmjs.org/package/carryall)
+[![Coverage Status](https://coveralls.io/repos/github/bluealba/carryall/badge.svg?branch=master)](https://coveralls.io/github/bluealba/carryall?branch=master)
+
+
 A easy way to keep your environments in sync
+
 
 ![Atreides Carryall](carryall.jpg)
 
@@ -15,12 +23,12 @@ Yet, carryall is only a glorified script. Don't expect it to cook breakfast for 
 We recommend to install carryall globally in each server to be provisioned.
 
 ```
-$ npm instal --global @bluealba/carryall
+$ npm instal --global carryall
 ```
 
 You will need to create a configuration file. The default name is `carryall.json`. It should look something like this:
 
-```
+```javascript
 {
 	"environment": "<environment name>",
 	"descriptor": {
