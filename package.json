@@ -19,7 +19,7 @@
   "dependencies": {
     "@slack/client": "^4.8.0",
     "bluebird": "^3.5.3",
-    "chalk": "^2.4.1",
+    "chalk": "^3.0.0",
     "co": "^4.6.0",
     "commander": "^2.19.0",
     "inquirer": "^6.2.0",
