@@ -14,7 +14,7 @@
   "devDependencies": {
     "eslint": "^5.9.0",
     "eslint-plugin-jest": "^22.1.0",
-    "jest": "^23.6.0"
+    "jest": "^24.9.0"
   },
   "dependencies": {
     "@slack/client": "^4.8.0",
