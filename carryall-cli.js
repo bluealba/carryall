@@ -9,7 +9,11 @@ const ownVersion = require("./package.json");
 const parseConfig = (program, defaultReporter) => {
 	const config = JSON.parse(fs.readFileSync(program.config || "./carryall.json", { "encoding": "UTF-8" }));
 	config.reporter.mode = program.reporter || defaultReporter;
-	config.control = { silent: !!program.silent, noRestart: !program.restart }
+	config.control = {
+		silent: !!program.silent,
+		noRestart: !program.restart,
+		verbose: !!program.verbose
+	}
 	return config;
 }
 
@@ -23,6 +27,7 @@ program
 	.option("--reporter <reporter>", "Which reporter to use [cli|slack|combined]. Defaults to combined")
 	.option("-s, --silent", "Silent mode, will not prompt for any action")
 	.option("-R, --no-restart", "Do not perform a service restart")
+	.option("-v, --verbose", "Verbose mode")
 	.action(program => {
 		const config = parseConfig(program, "combined");
 		new Carryall().deploy(config)

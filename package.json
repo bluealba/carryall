@@ -12,22 +12,21 @@
     "test": "jest --coverage"
   },
   "devDependencies": {
-    "eslint": "^6.7.2",
-    "eslint-plugin-jest": "^23.1.1",
-    "jest": "^24.9.0"
+    "eslint": "^6.8.0",
+    "eslint-plugin-jest": "^23.6.0",
+    "jest": "^25.1.0"
   },
   "dependencies": {
     "@slack/client": "^5.0.2",
     "bluebird": "^3.7.2",
     "chalk": "^3.0.0",
-    "co": "^4.6.0",
-    "commander": "^4.0.1",
-    "inquirer": "^7.0.0",
+    "commander": "^4.1.0",
+    "inquirer": "^7.0.4",
     "node-emoji": "^1.10.0",
     "ora": "^4.0.3",
     "promisify-fs": "^1.0.39",
     "ramda": "^0.26.1",
-    "semver": "^6.3.0",
-    "simple-git": "^1.128.0"
+    "semver": "^7.1.1",
+    "simple-git": "^1.131.0"
   }
 }
