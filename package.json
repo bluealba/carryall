@@ -1,6 +1,6 @@
 {
   "name": "carryall",
-  "version": "1.0.13",
+  "version": "1.1.0",
   "description": "An easy way to keep your environments in sync",
   "main": "carryall-cli.js",
   "license": "MIT",
