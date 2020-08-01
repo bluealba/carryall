@@ -27,6 +27,6 @@
     "promisify-fs": "^1.0.39",
     "ramda": "^0.26.1",
     "semver": "^7.1.1",
-    "simple-git": "^1.131.0"
+    "simple-git": "^2.15.0"
   }
 }
