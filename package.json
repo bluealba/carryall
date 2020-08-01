@@ -25,7 +25,7 @@
     "node-emoji": "^1.10.0",
     "ora": "^4.0.3",
     "promisify-fs": "^1.0.39",
-    "ramda": "^0.26.1",
+    "ramda": "^0.27.1",
     "semver": "^7.1.1",
     "simple-git": "^1.131.0"
   }
