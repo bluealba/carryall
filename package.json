@@ -21,7 +21,7 @@
     "bluebird": "^3.7.2",
     "chalk": "^3.0.0",
     "commander": "^4.1.0",
-    "inquirer": "^7.0.4",
+    "inquirer": "^8.0.0",
     "node-emoji": "^1.10.0",
     "ora": "^4.0.3",
     "promisify-fs": "^1.0.39",
